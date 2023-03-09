@@ -112,7 +112,7 @@ namespace Calculator
                         label2.Visible = true; break;
                     }
               //     value = Convert.ToInt32(comboBox1.SelectedItem);
-           
+
             }
         }
 
@@ -130,38 +130,38 @@ namespace Calculator
                         break;
                     case 2:
                         {
-                            double a, b, c;
-                            if ((double.TryParse(textBox1.Text, out a) && (double.TryParse(textBox2.Text, out b) && (double.TryParse(textBox3.Text, out c)))))
-                            {
-                                double discriminant = b * b - 4 * a * c;
-                                //    textBox1.Text = discriminant.ToString();
-                                if (discriminant < 0)
-                                {
+                double a, b, c;
+                if ((double.TryParse(textBox1.Text, out a) && (double.TryParse(textBox2.Text, out b) && (double.TryParse(textBox3.Text, out c)))))
+                {
+                    double discriminant = b * b - 4 * a * c;
+                    //    textBox1.Text = discriminant.ToString();
+                    if (discriminant < 0)
+                    {
                                     label10.Visible = false; label11.Visible = false; textBox7.Visible = false; textBox8.Visible = false; label12.Visible = true;
-                                    label12.Text = "Дискриминант меньше нуля. \nКорней нет.";
-                                }
-                                else if (discriminant == 0)
-                                {
-                                    double x = -b / (2 * a);
-                                    // textBox11.Text = x.ToString();
-                                    label10.Visible = true;
-                                    label11.Visible = true;
-                                    textBox7.Visible = true;
-                                    textBox8.Visible = true;
+                        label12.Text = "Дискриминант меньше нуля. \nКорней нет.";
+                    }
+                    else if (discriminant == 0)
+                    {
+                        double x = -b / (2 * a);
+                        // textBox11.Text = x.ToString();
+                        label10.Visible = true;
+                        label11.Visible = true;
+                        textBox7.Visible = true;
+                        textBox8.Visible = true;
+                     
+                        //  label13.Visible = true;
+                        //   textBox11.Visible = true;
+                    }
+                    else
+                    {
+                        double x1 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+                        textBox7.Text = x1.ToString();
+                        double x2 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                        textBox8.Text = x2.ToString();
+                    }
 
-                                    //  label13.Visible = true;
-                                    //   textBox11.Visible = true;
-                                }
-                                else
-                                {
-                                    double x1 = (-b - Math.Sqrt(discriminant)) / (2 * a);
-                                    textBox7.Text = x1.ToString();
-                                    double x2 = (-b + Math.Sqrt(discriminant)) / (2 * a);
-                                    textBox8.Text = x2.ToString();
-                                }
-                            
-                            }
-                        }
+                }
+            }
                         break;
                 }
 

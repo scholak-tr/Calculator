@@ -41,6 +41,8 @@ namespace Calculator
                         label5.Visible = true;
                         textBox1.Visible = true;
                         textBox2.Visible = true;
+                        label13.Visible = true;
+                        _value0.Visible = true;
                         label3.Visible = true; break;
 
                     }
@@ -112,7 +114,7 @@ namespace Calculator
                         label2.Visible = true; break;
                     }
               //     value = Convert.ToInt32(comboBox1.SelectedItem);
-           
+
             }
         }
 
@@ -123,45 +125,62 @@ namespace Calculator
                 switch (Convert.ToInt32(comboBox1.SelectedItem))
                 {
                     case 1:
-                        { 
-
-                       
+                        {
+                            int a, b;
+                            if((int.TryParse(textBox1.Text, out a) && (int.TryParse(textBox2.Text, out b))))
+                            {
+                                var x = -b / a;
+                                _value0.Text = x.ToString();
+                            }
+                            chart1.Series["Func"].Points.Clear();
+                            int y;
+                            for(int x=-10; x<=10;  x++)
+                            {
+                               y = Convert.ToInt32(textBox1.Text) * x + Convert.ToInt32(textBox2.Text);
+                               chart1.Series["Func"].Points.AddXY(x, y);
+                            }
                         }
                         break;
                     case 2:
                         {
-                            double a, b, c;
-                            if ((double.TryParse(textBox1.Text, out a) && (double.TryParse(textBox2.Text, out b) && (double.TryParse(textBox3.Text, out c)))))
-                            {
-                                double discriminant = b * b - 4 * a * c;
-                                //    textBox1.Text = discriminant.ToString();
-                                if (discriminant < 0)
-                                {
+                double a, b, c;
+                if ((double.TryParse(textBox1.Text, out a) && (double.TryParse(textBox2.Text, out b) && (double.TryParse(textBox3.Text, out c)))))
+                {
+                    double discriminant = b * b - 4 * a * c;
+                    //
+                    // textBox1.Text = discriminant.ToString();
+                    if (discriminant < 0)
+                    {
                                     label10.Visible = false; label11.Visible = false; textBox7.Visible = false; textBox8.Visible = false; label12.Visible = true;
                                     label12.Text = "Дискриминант меньше нуля. \nКорней нет.";
-                                }
-                                else if (discriminant == 0)
-                                {
-                                    double x = -b / (2 * a);
-                                    // textBox11.Text = x.ToString();
-                                    label10.Visible = true;
-                                    label11.Visible = true;
-                                    textBox7.Visible = true;
-                                    textBox8.Visible = true;
+                    }
+                    else if (discriminant == 0)
+                    {
+                        double x = -b / (2 * a);
+                        _value0.Text = x.ToString();         
+                        // textBox11.Text = x.ToString();
+                        label10.Visible = true;
+                        label11.Visible = true;
+                        textBox7.Visible = true;
+                        textBox8.Visible = true;
+                    }
+                    else
+                    {
+                        double x1 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+                        textBox7.Text = x1.ToString();
+                        double x2 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                        textBox8.Text = x2.ToString();
+                    }
 
-                                    //  label13.Visible = true;
-                                    //   textBox11.Visible = true;
-                                }
-                                else
+                                chart1.Series["Func"].Points.Clear();
+                                int y;
+                                for (int x=-10; x<=10; x++)
                                 {
-                                    double x1 = (-b - Math.Sqrt(discriminant)) / (2 * a);
-                                    textBox7.Text = x1.ToString();
-                                    double x2 = (-b + Math.Sqrt(discriminant)) / (2 * a);
-                                    textBox8.Text = x2.ToString();
+                                    y = Convert.ToInt32(textBox1.Text) * x * x + Convert.ToInt32(textBox2.Text) * x + Convert.ToInt32(textBox3.Text);
+                                    chart1.Series["Func"].Points.AddXY(x, y);
                                 }
-                            
-                            }
-                        }
+                }
+            }
                         break;
                 }
 

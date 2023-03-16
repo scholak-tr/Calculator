@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class Form : System.Windows.Forms.Form
     {
-        public Form1()
+        public Form()
         {
             InitializeComponent();
         }
@@ -39,8 +39,8 @@ namespace Calculator
                         groupBox1.Visible = true;
                         label4.Visible = true;
                         label5.Visible = true;
-                        textBox1.Visible = true;
-                        textBox2.Visible = true;
+                        coef_a.Visible = true;
+                        coef_b.Visible = true;
                         label13.Visible = true;
                         _value0.Visible = true;
                         label3.Visible = true; break;
@@ -52,9 +52,9 @@ namespace Calculator
                         label4.Visible = true;
                         label5.Visible = true;
                         label6.Visible = true;
-                        textBox1.Visible = true;
-                        textBox2.Visible = true;
-                        textBox3.Visible = true;
+                        coef_a.Visible = true;
+                        coef_b.Visible = true;
+                        coef_c.Visible = true;
                         _value1.Visible = true;
                         _value2.Visible = true;
                         label3.Visible = true;
@@ -70,10 +70,10 @@ namespace Calculator
                         label5.Visible = true;
                         label6.Visible = true;
                         label7.Visible = true;
-                        textBox1.Visible = true;
-                        textBox2.Visible = true;
-                        textBox3.Visible = true;
-                        textBox4.Visible = true;
+                        coef_a.Visible = true;
+                        coef_b.Visible = true;
+                        coef_c.Visible = true;
+                        coef_d.Visible = true;
                         // textBox5.Visible = true;
                         label2.Visible = true; break;
                     }
@@ -87,11 +87,11 @@ namespace Calculator
                         label6.Visible = true;
                         label7.Visible = true;
                         label8.Visible = true;
-                        textBox2.Visible = true;
-                        textBox3.Visible = true;
-                        textBox4.Visible = true;
-                        textBox5.Visible = true;
-                        textBox6.Visible = true;
+                        coef_b.Visible = true;
+                        coef_c.Visible = true;
+                        coef_d.Visible = true;
+                        coef_e.Visible = true;
+                        coef_f.Visible = true;
                         label2.Visible = true; break;
                     }
 
@@ -105,11 +105,11 @@ namespace Calculator
                         label7.Visible = true;
                         label8.Visible = true;
                         label9.Visible = true;
-                        textBox2.Visible = true;
-                        textBox3.Visible = true;
-                        textBox4.Visible = true;
-                        textBox5.Visible = true;
-                        textBox6.Visible = true;
+                        coef_b.Visible = true;
+                        coef_c.Visible = true;
+                        coef_d.Visible = true;
+                        coef_e.Visible = true;
+                        coef_f.Visible = true;
                         //      textBox7.Visible = true;
                         label2.Visible = true; break;
                     }
@@ -117,7 +117,7 @@ namespace Calculator
 
             }
         }
-
+ 
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -127,7 +127,7 @@ namespace Calculator
                     case 1:
                         {
                             int a, b;
-                            if((int.TryParse(textBox1.Text, out a) && (int.TryParse(textBox2.Text, out b))))
+                            if((int.TryParse(coef_a.Text, out a) && (int.TryParse(coef_b.Text, out b))))
                             {
                                 var x = -b / a;
                                 _value0.Text = x.ToString();
@@ -136,7 +136,7 @@ namespace Calculator
                             int y;
                             for(int x=-10; x<=10;  x++)
                             {
-                               y = Convert.ToInt32(textBox1.Text) * x + Convert.ToInt32(textBox2.Text);
+                               y = Convert.ToInt32(coef_a.Text) * x + Convert.ToInt32(coef_b.Text);
                                chart1.Series["Func"].Points.AddXY(x, y);
                             }
                         }
@@ -144,7 +144,7 @@ namespace Calculator
                     case 2:
                         {
                 double a, b, c;
-                if ((double.TryParse(textBox1.Text, out a) && (double.TryParse(textBox2.Text, out b) && (double.TryParse(textBox3.Text, out c)))))
+                if ((double.TryParse(coef_a.Text, out a) && (double.TryParse(coef_b.Text, out b) && (double.TryParse(coef_c.Text, out c)))))
                 {
                     double discriminant = b * b - 4 * a * c;
                     //
@@ -176,7 +176,7 @@ namespace Calculator
                                 int y;
                                 for (int x=-10; x<=10; x++)
                                 {
-                                    y = Convert.ToInt32(textBox1.Text) * x * x + Convert.ToInt32(textBox2.Text) * x + Convert.ToInt32(textBox3.Text);
+                                    y = Convert.ToInt32(coef_a.Text) * x * x + Convert.ToInt32(coef_b.Text) * x + Convert.ToInt32(coef_c.Text);
                                     chart1.Series["Func"].Points.AddXY(x, y);
                                 }
                 }
@@ -184,21 +184,31 @@ namespace Calculator
                         break;
                     case 3:
                         {
+                            double a, b, c, d;
+                            if ((double.TryParse(coef_a.Text, out a) && (double.TryParse(coef_b.Text, out b) && (double.TryParse(coef_c.Text, out c) && (double.TryParse(coef_d.Text, out d)))))) ;
+       
 
                         }
                         break;
                     case 4:
                         {
 
+
                         }
                         break;
                 }
 
-            }
+            }           
             catch (FormatException)
             {
                 MessageBox.Show("Ошибка формата", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LimitFuction lim = new LimitFuction();
+            lim.ShowDialog();
         }
     }
 }

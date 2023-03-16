@@ -55,8 +55,8 @@ namespace Calculator
                         textBox1.Visible = true;
                         textBox2.Visible = true;
                         textBox3.Visible = true;
-                        textBox7.Visible = true;
-                        textBox8.Visible = true;
+                        _value1.Visible = true;
+                        _value2.Visible = true;
                         label3.Visible = true;
                         label10.Visible = true;
                         label11.Visible = true;
@@ -151,7 +151,7 @@ namespace Calculator
                     // textBox1.Text = discriminant.ToString();
                     if (discriminant < 0)
                     {
-                                    label10.Visible = false; label11.Visible = false; textBox7.Visible = false; textBox8.Visible = false; label12.Visible = true;
+                                    label10.Visible = false; label11.Visible = false; _value1.Visible = false; _value2.Visible = false; label12.Visible = true;
                                     label12.Text = "Дискриминант меньше нуля. \nКорней нет.";
                     }
                     else if (discriminant == 0)
@@ -161,15 +161,15 @@ namespace Calculator
                         // textBox11.Text = x.ToString();
                         label10.Visible = true;
                         label11.Visible = true;
-                        textBox7.Visible = true;
-                        textBox8.Visible = true;
+                        _value1.Visible = true;
+                        _value2.Visible = true;
                     }
                     else
                     {
                         double x1 = (-b - Math.Sqrt(discriminant)) / (2 * a);
-                        textBox7.Text = x1.ToString();
+                        _value1.Text = x1.ToString();
                         double x2 = (-b + Math.Sqrt(discriminant)) / (2 * a);
-                        textBox8.Text = x2.ToString();
+                        _value2.Text = x2.ToString();
                     }
 
                                 chart1.Series["Func"].Points.Clear();
@@ -181,6 +181,16 @@ namespace Calculator
                                 }
                 }
             }
+                        break;
+                    case 3:
+                        {
+
+                        }
+                        break;
+                    case 4:
+                        {
+
+                        }
                         break;
                 }
 

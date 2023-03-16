@@ -51,16 +51,16 @@ namespace Calculator
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this._value0 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this._value2 = new System.Windows.Forms.TextBox();
+            this._value1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label13 = new System.Windows.Forms.Label();
-            this._value0 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -244,8 +244,8 @@ namespace Calculator
             this.groupBox2.Controls.Add(this._value0);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this._value2);
+            this.groupBox2.Controls.Add(this._value1);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Location = new System.Drawing.Point(259, 186);
@@ -254,6 +254,24 @@ namespace Calculator
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Найти корни:";
+            // 
+            // _value0
+            // 
+            this._value0.Location = new System.Drawing.Point(137, 19);
+            this._value0.Name = "_value0";
+            this._value0.Size = new System.Drawing.Size(56, 20);
+            this._value0.TabIndex = 6;
+            this._value0.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(116, 26);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(15, 13);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "x:";
+            this.label13.Visible = false;
             // 
             // label12
             // 
@@ -265,21 +283,21 @@ namespace Calculator
             this.label12.Text = "label12";
             this.label12.Visible = false;
             // 
-            // textBox8
+            // _value2
             // 
-            this.textBox8.Location = new System.Drawing.Point(51, 45);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(49, 20);
-            this.textBox8.TabIndex = 3;
-            this.textBox8.Visible = false;
+            this._value2.Location = new System.Drawing.Point(51, 45);
+            this._value2.Name = "_value2";
+            this._value2.Size = new System.Drawing.Size(49, 20);
+            this._value2.TabIndex = 3;
+            this._value2.Visible = false;
             // 
-            // textBox7
+            // _value1
             // 
-            this.textBox7.Location = new System.Drawing.Point(51, 19);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(49, 20);
-            this.textBox7.TabIndex = 2;
-            this.textBox7.Visible = false;
+            this._value1.Location = new System.Drawing.Point(51, 19);
+            this._value1.Name = "_value1";
+            this._value1.Size = new System.Drawing.Size(49, 20);
+            this._value1.TabIndex = 2;
+            this._value1.Visible = false;
             // 
             // label11
             // 
@@ -343,24 +361,6 @@ namespace Calculator
             title1.Text = "Графики функции";
             this.chart1.Titles.Add(title1);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(116, 26);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(15, 13);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "x:";
-            this.label13.Visible = false;
-            // 
-            // _value0
-            // 
-            this._value0.Location = new System.Drawing.Point(137, 19);
-            this._value0.Name = "_value0";
-            this._value0.Size = new System.Drawing.Size(56, 20);
-            this._value0.TabIndex = 6;
-            this._value0.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,8 +411,8 @@ namespace Calculator
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox _value2;
+        private System.Windows.Forms.TextBox _value1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox _value0;

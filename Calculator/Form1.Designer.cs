@@ -38,12 +38,12 @@ namespace Calculator
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.coef_f = new System.Windows.Forms.TextBox();
+            this.coef_e = new System.Windows.Forms.TextBox();
+            this.coef_d = new System.Windows.Forms.TextBox();
+            this.coef_c = new System.Windows.Forms.TextBox();
+            this.coef_b = new System.Windows.Forms.TextBox();
+            this.coef_a = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -111,12 +111,12 @@ namespace Calculator
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.coef_f);
+            this.groupBox1.Controls.Add(this.coef_e);
+            this.groupBox1.Controls.Add(this.coef_d);
+            this.groupBox1.Controls.Add(this.coef_c);
+            this.groupBox1.Controls.Add(this.coef_b);
+            this.groupBox1.Controls.Add(this.coef_a);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -130,53 +130,53 @@ namespace Calculator
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Введите коэффициенты уравнения:";
             // 
-            // textBox6
+            // coef_f
             // 
-            this.textBox6.Location = new System.Drawing.Point(44, 192);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(35, 20);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.Visible = false;
+            this.coef_f.Location = new System.Drawing.Point(44, 192);
+            this.coef_f.Name = "coef_f";
+            this.coef_f.Size = new System.Drawing.Size(35, 20);
+            this.coef_f.TabIndex = 11;
+            this.coef_f.Visible = false;
             // 
-            // textBox5
+            // coef_e
             // 
-            this.textBox5.Location = new System.Drawing.Point(44, 158);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(35, 20);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Visible = false;
+            this.coef_e.Location = new System.Drawing.Point(44, 158);
+            this.coef_e.Name = "coef_e";
+            this.coef_e.Size = new System.Drawing.Size(35, 20);
+            this.coef_e.TabIndex = 10;
+            this.coef_e.Visible = false;
             // 
-            // textBox4
+            // coef_d
             // 
-            this.textBox4.Location = new System.Drawing.Point(44, 127);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(35, 20);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.Visible = false;
+            this.coef_d.Location = new System.Drawing.Point(44, 127);
+            this.coef_d.Name = "coef_d";
+            this.coef_d.Size = new System.Drawing.Size(35, 20);
+            this.coef_d.TabIndex = 9;
+            this.coef_d.Visible = false;
             // 
-            // textBox3
+            // coef_c
             // 
-            this.textBox3.Location = new System.Drawing.Point(44, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(35, 20);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Visible = false;
+            this.coef_c.Location = new System.Drawing.Point(44, 98);
+            this.coef_c.Name = "coef_c";
+            this.coef_c.Size = new System.Drawing.Size(35, 20);
+            this.coef_c.TabIndex = 8;
+            this.coef_c.Visible = false;
             // 
-            // textBox2
+            // coef_b
             // 
-            this.textBox2.Location = new System.Drawing.Point(44, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(35, 20);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.Visible = false;
+            this.coef_b.Location = new System.Drawing.Point(44, 69);
+            this.coef_b.Name = "coef_b";
+            this.coef_b.Size = new System.Drawing.Size(35, 20);
+            this.coef_b.TabIndex = 7;
+            this.coef_b.Visible = false;
             // 
-            // textBox1
+            // coef_a
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(35, 20);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Visible = false;
+            this.coef_a.Location = new System.Drawing.Point(44, 37);
+            this.coef_a.Name = "coef_a";
+            this.coef_a.Size = new System.Drawing.Size(35, 20);
+            this.coef_a.TabIndex = 6;
+            this.coef_a.Visible = false;
             // 
             // label9
             // 
@@ -400,12 +400,12 @@ namespace Calculator
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox coef_f;
+        private System.Windows.Forms.TextBox coef_e;
+        private System.Windows.Forms.TextBox coef_d;
+        private System.Windows.Forms.TextBox coef_c;
+        private System.Windows.Forms.TextBox coef_b;
+        private System.Windows.Forms.TextBox coef_a;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

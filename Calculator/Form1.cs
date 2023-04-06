@@ -179,7 +179,9 @@ namespace Calculator
                                     y = Convert.ToInt32(coef_a.Text) * x * x + Convert.ToInt32(coef_b.Text) * x + Convert.ToInt32(coef_c.Text);
                                     chart1.Series["Func"].Points.AddXY(x, y);
                                 }
-                }
+                                chart1.Series["Func"].Points.Clear();
+                              
+                            }
             }
                         break;
                     case 3:

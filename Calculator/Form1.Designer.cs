@@ -56,12 +56,18 @@ namespace Calculator
             this.label12 = new System.Windows.Forms.Label();
             this._value2 = new System.Windows.Forms.TextBox();
             this._value1 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelx2 = new System.Windows.Forms.Label();
+            this.labelx1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelx3 = new System.Windows.Forms.Label();
+            this.labelx4 = new System.Windows.Forms.Label();
+            this.labelx5 = new System.Windows.Forms.Label();
+            this._value3 = new System.Windows.Forms.TextBox();
+            this._value4 = new System.Windows.Forms.TextBox();
+            this._value5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -242,13 +248,19 @@ namespace Calculator
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this._value5);
+            this.groupBox2.Controls.Add(this._value4);
+            this.groupBox2.Controls.Add(this._value3);
+            this.groupBox2.Controls.Add(this.labelx5);
+            this.groupBox2.Controls.Add(this.labelx4);
+            this.groupBox2.Controls.Add(this.labelx3);
             this.groupBox2.Controls.Add(this._value0);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this._value2);
             this.groupBox2.Controls.Add(this._value1);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.labelx2);
+            this.groupBox2.Controls.Add(this.labelx1);
             this.groupBox2.Location = new System.Drawing.Point(259, 186);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(225, 230);
@@ -277,7 +289,7 @@ namespace Calculator
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 76);
+            this.label12.Location = new System.Drawing.Point(24, 195);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 4;
@@ -286,39 +298,39 @@ namespace Calculator
             // 
             // _value2
             // 
-            this._value2.Location = new System.Drawing.Point(51, 45);
+            this._value2.Location = new System.Drawing.Point(51, 53);
             this._value2.Name = "_value2";
-            this._value2.Size = new System.Drawing.Size(49, 20);
+            this._value2.Size = new System.Drawing.Size(48, 20);
             this._value2.TabIndex = 3;
             this._value2.Visible = false;
             // 
             // _value1
             // 
-            this._value1.Location = new System.Drawing.Point(51, 19);
+            this._value1.Location = new System.Drawing.Point(51, 23);
             this._value1.Name = "_value1";
-            this._value1.Size = new System.Drawing.Size(49, 20);
+            this._value1.Size = new System.Drawing.Size(48, 20);
             this._value1.TabIndex = 2;
             this._value1.Visible = false;
             // 
-            // label11
+            // labelx2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(24, 50);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(21, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "x2:";
-            this.label11.Visible = false;
+            this.labelx2.AutoSize = true;
+            this.labelx2.Location = new System.Drawing.Point(24, 56);
+            this.labelx2.Name = "labelx2";
+            this.labelx2.Size = new System.Drawing.Size(21, 13);
+            this.labelx2.TabIndex = 1;
+            this.labelx2.Text = "x2:";
+            this.labelx2.Visible = false;
             // 
-            // label10
+            // labelx1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 27);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "x1:";
-            this.label10.Visible = false;
+            this.labelx1.AutoSize = true;
+            this.labelx1.Location = new System.Drawing.Point(24, 27);
+            this.labelx1.Name = "labelx1";
+            this.labelx1.Size = new System.Drawing.Size(21, 13);
+            this.labelx1.TabIndex = 0;
+            this.labelx1.Text = "x1:";
+            this.labelx1.Visible = false;
             // 
             // button1
             // 
@@ -372,6 +384,54 @@ namespace Calculator
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // labelx3
+            // 
+            this.labelx3.AutoSize = true;
+            this.labelx3.Location = new System.Drawing.Point(24, 85);
+            this.labelx3.Name = "labelx3";
+            this.labelx3.Size = new System.Drawing.Size(21, 13);
+            this.labelx3.TabIndex = 7;
+            this.labelx3.Text = "x3:";
+            // 
+            // labelx4
+            // 
+            this.labelx4.AutoSize = true;
+            this.labelx4.Location = new System.Drawing.Point(24, 118);
+            this.labelx4.Name = "labelx4";
+            this.labelx4.Size = new System.Drawing.Size(21, 13);
+            this.labelx4.TabIndex = 8;
+            this.labelx4.Text = "x4:";
+            // 
+            // labelx5
+            // 
+            this.labelx5.AutoSize = true;
+            this.labelx5.Location = new System.Drawing.Point(24, 150);
+            this.labelx5.Name = "labelx5";
+            this.labelx5.Size = new System.Drawing.Size(21, 13);
+            this.labelx5.TabIndex = 9;
+            this.labelx5.Text = "x5:";
+            // 
+            // _value3
+            // 
+            this._value3.Location = new System.Drawing.Point(51, 82);
+            this._value3.Name = "_value3";
+            this._value3.Size = new System.Drawing.Size(48, 20);
+            this._value3.TabIndex = 10;
+            // 
+            // _value4
+            // 
+            this._value4.Location = new System.Drawing.Point(51, 115);
+            this._value4.Name = "_value4";
+            this._value4.Size = new System.Drawing.Size(48, 20);
+            this._value4.TabIndex = 11;
+            // 
+            // _value5
+            // 
+            this._value5.Location = new System.Drawing.Point(51, 143);
+            this._value5.Name = "_value5";
+            this._value5.Size = new System.Drawing.Size(49, 20);
+            this._value5.TabIndex = 12;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,8 +479,8 @@ namespace Calculator
         private System.Windows.Forms.TextBox coef_b;
         private System.Windows.Forms.TextBox coef_a;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelx2;
+        private System.Windows.Forms.Label labelx1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox _value2;
@@ -430,6 +490,12 @@ namespace Calculator
         private System.Windows.Forms.TextBox _value0;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelx5;
+        private System.Windows.Forms.Label labelx4;
+        private System.Windows.Forms.Label labelx3;
+        private System.Windows.Forms.TextBox _value5;
+        private System.Windows.Forms.TextBox _value4;
+        private System.Windows.Forms.TextBox _value3;
     }
 }
 

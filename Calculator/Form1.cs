@@ -58,8 +58,8 @@ namespace Calculator
                         _value1.Visible = true;
                         _value2.Visible = true;
                         label3.Visible = true;
-                        label10.Visible = true;
-                        label11.Visible = true;
+                        labelx1.Visible = true;
+                        labelx2.Visible = true;
                         break;
                     }
                 case 3:
@@ -151,7 +151,7 @@ namespace Calculator
                     // textBox1.Text = discriminant.ToString();
                     if (discriminant < 0)
                     {
-                                    label10.Visible = false; label11.Visible = false; _value1.Visible = false; _value2.Visible = false; label12.Visible = true;
+                                    labelx1.Visible = false; labelx2.Visible = false; _value1.Visible = false; _value2.Visible = false; label12.Visible = true;
                                     label12.Text = "Дискриминант меньше нуля. \nКорней нет.";
                     }
                     else if (discriminant == 0)
@@ -159,8 +159,8 @@ namespace Calculator
                         double x = -b / (2 * a);
                         _value0.Text = x.ToString();         
                         // textBox11.Text = x.ToString();
-                        label10.Visible = true;
-                        label11.Visible = true;
+                        labelx1.Visible = true;
+                        labelx2.Visible = true;
                         _value1.Visible = true;
                         _value2.Visible = true;
                     }
@@ -187,8 +187,46 @@ namespace Calculator
                     case 3:
                         {
                             double a, b, c, d;
-                            if ((double.TryParse(coef_a.Text, out a) && (double.TryParse(coef_b.Text, out b) && (double.TryParse(coef_c.Text, out c) && (double.TryParse(coef_d.Text, out d)))))) ;
-       
+                            if ((double.TryParse(coef_a.Text, out a) && (double.TryParse(coef_b.Text, out b) && (double.TryParse(coef_c.Text, out c) && (double.TryParse(coef_d.Text, out d)))))) 
+                            {
+                                if (a == 3)
+                                    throw new Exception("Ошибка ввода данных. Изменить коэффициенты");
+                                    double p = (3 * a*c - b* b) / (3 * a * a);
+                                    double q = (2 * b * b * b - 9 * a * b * c + 27 * a*a *d) / (27 * a * a * a);
+                                    double Q = Math.Pow(p / 3, 3) + Math.Pow(q / 2, 2);
+                                
+                               if(Q < 0)
+                                {
+                                    double x1=2*Math.Sqrt(-p/3)*Math.Cos(0.333*Math.Acos(3*q/(2*p)+Math.Sqrt(-3/p))-0*2*Math.PI/3)-b / (3 * a);
+                                    double x2 = 2 * Math.Sqrt(-p / 3) * Math.Cos(0.333 * Math.Acos(3 * q/(2 * p) * Math.Sqrt(-3 / p)) - 1 * 2 * Math.PI / 3) - b / (3 * a);
+                                    double x3 = 2 * Math.Sqrt(-p / 3) * Math.Cos(0.333 * Math.Acos(3 * q / (2 * p) * Math.Sqrt(-3 / p)) - 2 * 2 * Math.PI / 3) - b / (3 * a);
+                                    labelx1.Visible = true; labelx2.Visible = true; labelx3.Visible = true;
+                                    _value1.Visible = true; _value2.Visible = true; _value3.Visible = true;
+                                    _value1.Text = Math.Round(x1, 3).ToString();
+                                    _value2.Text = Math.Round(x2, 3).ToString();
+                                    _value3.Text = Math.Round(x3, 3).ToString();
+
+                                }
+                               else if (Q==0)
+                                {
+                                    double u = Math.Pow((double)(-q / 2 + Math.Sqrt(Q)), (double)1 / 3);
+                                    double y = -Math.Pow((double)(q / 2 + Math.Sqrt(Q)), (double)1 / 3);
+                                    double x1 = u + y - b / (3 * a);
+                                    double x2 = (-u - y) / 2 - b / (3 * a);
+                                    double x3 = (u - y) * Math.Sqrt(3) / 2;
+                                    labelx1.Visible = true; labelx2.Visible = true; labelx3.Visible = true;
+                                    _value1.Visible = true; _value2.Visible = true; _value3.Visible = true;
+                                    _value1.Text = Math.Round(x1, 3).ToString();
+                                    _value2.Text = Math.Round(x2, 3).ToString();
+                                    _value3.Text = Math.Round(x3, 3).ToString();
+
+                                }
+                               else if(Q>0)
+                                {
+                                    double u=Math.Pow (double)(-q/2+Math.Sqrt(Q)),
+                                }
+                            }
+
 
                         }
                         break;
